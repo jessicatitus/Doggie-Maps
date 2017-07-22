@@ -20,6 +20,7 @@ export default class SimpleMapExample extends Component {
   render() {
     return (
       <div style={{height: 400, width: 400}}>
+        <h1>With a title</h1>
         <SimpleMapExampleGoogleMap
           containerElement={
             <div style={{ height: `100%` }} />
