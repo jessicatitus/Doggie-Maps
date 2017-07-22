@@ -6,7 +6,8 @@ Contributors:
   <li> Spencer Dixon </li>
   <li> Alex Visconde </li>
  </ul> 
-
+ 
+Technologies: This is a simple React application using the Google Maps API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
