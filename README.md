@@ -1,11 +1,9 @@
 I wanted to make an app to find the closest dog park to me anywhere in the world using the google maps API so my Mom could find places for her dog to play when she travels.
 
 Contributors:
-<ul>
-  <li> 
-    Spencer Dixon
-    Alex Visconde
-  </li>
+ <ul>
+  <li> Spencer Dixon </li>
+  <li> Alex Visconde </li>
  </ul> 
 
 
