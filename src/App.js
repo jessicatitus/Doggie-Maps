@@ -16,13 +16,15 @@ const SimpleMapExampleGoogleMap = withGoogleMap(({lat, lng, markers, onMount, ..
     center={{lat, lng}}
     {...rest}
   >
+
     {markers.map(marker => {
       return (
         <Marker
+          onClick={ function markerClickHandler() { alert('Location: ' + marker.address) } }
           position={{ lat: marker.lat, lng: marker.lng }}
           key={marker.key}
           icon="http://aminoapps.com/static/bower/emojify.js/images/emoji/dog.png"
-        />
+          />
       );
     })}
   </GoogleMap>
@@ -99,7 +101,7 @@ export default class SimpleMapExample extends Component {
   render() {
     const markers = this.state.places.map(place => {
       const { geometry: { location } } = place;
-      return { key: place.id, lat: location.lat(), lng: location.lng() };
+      return { key: place.id, lat: location.lat(), lng: location.lng(), address: place.vicinity };
     });
 
     return (
