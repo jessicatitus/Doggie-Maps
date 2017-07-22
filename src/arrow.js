@@ -3,7 +3,7 @@ import React, { Component } from "react";
 const Arrow = (props) => {
   return(
     <div className='arrow-container'>
-      <button onClick={props.onClick}>↗</button>
+      <button className='arrow' onClick={props.onClick}>↗</button>
     </div>
   )
 }
