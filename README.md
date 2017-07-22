@@ -2,6 +2,7 @@ I wanted to make an app to find the closest dog park to me anywhere in the world
 
 Contributors:
  <ul>
+  <li> Jessica Titus </li>
   <li> Spencer Dixon </li>
   <li> Alex Visconde </li>
  </ul> 
