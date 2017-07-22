@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "geolocation-marker": "^2.0.4",
