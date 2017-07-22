@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import currentLocation from './currentLocation.js';
 import { Marker, withGoogleMap, GoogleMap, } from "react-google-maps";
+import Title from './Title'
 
 
 // Required for create react app to not complain
@@ -63,7 +64,10 @@ export default class SimpleMapExample extends Component {
     });
 
     return (
-      <div style={{height: this.state.mapH, width: this.state.mapW}}>
+      <div style={{height: this.state.mapH, width: this.state.mapW, position: 'relative'}}>
+        <Title>
+          Doggie Park 🐶
+        </Title>
         <SimpleMapExampleGoogleMap
           containerElement={
             <div style={{ height: `100%` }} />
