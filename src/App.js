@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import currentLocation from './currentLocation.js';
 import { Marker, withGoogleMap, GoogleMap, } from "react-google-maps";
 import Title from './Title'
-
+import Arrow from './arrow'
 
 // Required for create react app to not complain
 const google = window.google;
@@ -29,17 +29,17 @@ const SimpleMapExampleGoogleMap = withGoogleMap(({lat, lng, markers, onMount, ..
 ));
 
 export default class SimpleMapExample extends Component {
-  state = { 
+  state = {
     // current dog parkes we found
-    places: [], 
+    places: [],
 
     // used for making map take up the whole screen
-    mapH: 0, 
-    mapW: 0, 
+    mapH: 0,
+    mapW: 0,
 
     // starting position be launch academy
-    lat: 42.3540204, 
-    lng: -71.0610617 
+    lat: 42.3540204,
+    lng: -71.0610617
   }
 
   componentDidMount() {
@@ -73,7 +73,7 @@ export default class SimpleMapExample extends Component {
   }
 
   handleCurrentPosition = ({latitude, longitude}) => {
-    this.setState({lat: latitude, lng: longitude});
+    this.setState({lat: latitude, lng: longitude}, this.findParks);
   }
 
   handleBoundsChange = () => {
@@ -107,6 +107,9 @@ export default class SimpleMapExample extends Component {
         <Title>
           Doggie Park 🐶
         </Title>
+        <Arrow
+          onClick={() => currentLocation(this.handleCurrentPosition)}
+        />
         <SimpleMapExampleGoogleMap
           onBoundsChange={this.handleBoundsChange}
           onMount={this.handleMapMounted}
