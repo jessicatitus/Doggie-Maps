@@ -23,7 +23,7 @@ const SimpleMapExampleGoogleMap = withGoogleMap(({lat, lng, markers, onMount, ..
           onClick={ function markerClickHandler() { alert('Location: ' + marker.address) } }
           position={{ lat: marker.lat, lng: marker.lng }}
           key={marker.key}
-          icon="http://aminoapps.com/static/bower/emojify.js/images/emoji/dog.png"
+          icon="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/96/dog-face_1f436.png"
           />
       );
     })}
