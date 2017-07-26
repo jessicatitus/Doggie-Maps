@@ -19,7 +19,7 @@ const SimpleMapExampleGoogleMap = withGoogleMap(({lat, lng, markers, onMount, ..
 
     {markers.map(marker => {
       return (
-        <Marker
+          <Marker
           onClick={ function markerClickHandler() { alert('Location: ' + marker.address) } }
           position={{ lat: marker.lat, lng: marker.lng }}
           key={marker.key}
